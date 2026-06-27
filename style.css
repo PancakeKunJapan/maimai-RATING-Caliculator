@@ -96,6 +96,18 @@ h1:hover {
     text-shadow: var(--accent) 0 0 10px;
 }
 
+.simple-line {
+  border: none;
+  height: 0.25em;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin: 24px 0;
+}
+
+.section-title {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eaecef; 
+}
+
 .content-box {
     background-color: var(--bga);
     padding: 25px;
