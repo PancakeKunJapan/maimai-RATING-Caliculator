@@ -212,7 +212,7 @@ input[type="text"] {
     user-select: text !important;
 }
 
-/* フッター（無断転載禁止 / Xリンク） */
+/* フッター（無断転載禁止 / 各種リンク） */
 .footer-credits {
     text-align: center;
     margin-top: 40px;
@@ -220,11 +220,14 @@ input[type="text"] {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 0.85rem;
     color: #666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .footer-credits strong {
     color: #ff4757;
-    margin-right: 15px;
 }
 
 .footer-credits a {
