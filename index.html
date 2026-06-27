@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maimaiでらっくす レート計算</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1 onclick="location.reload()" style="cursor: pointer;">maimaiでらっくす でらっくすRATING計算機</h1>
+        <div id=howtouse class="content-box">
+            <h2 name="howtouse-title">計算機の使い方</h2>
+            <div name="howtouse-contents">
+                <p>1. 達成率%を入力してください｡101.0000から0.0000の中で入力してください｡小数部分は簡略化しても大丈夫です(100.5や98.76など)</p>
+                <p>2. 譜面定数の整数部分を選択してください｡(12.3なら12､14.0なら14など)</p>
+                <p>3. 譜面定数の小数部分を選択してください｡(12.3なら3､14.0なら.0)</p>
+                <p>4. AP済みならチェックボックスにチェックを入れてください｡</p>
+                <p>単曲レートは一曲のレート値が表示されます｡RATINGは単曲レート*50曲分のレート値が表示されます｡</p>
+                <p>計算は自動で行われます｡</p>
+            </div>
+        </div>
+        <div id="caliculator" class="content-box">
+            <h2>計算機</h2>
+            <div name="caliculator-input">
+                <h3>入力</h3>
+                <label for="caliculator-input-score">達成率%を入力(101.0000-0.0000)</label>
+                <input id="caliculator-input-score" inputmode="decimal" name="caliculator-input-score" type="text" value="101.0000">
+                <label for="caliculator-input-level">定数を選択(整数部分)</label>
+                <select id="caliculator-input-level" name="caliculator-input-level">
+                    <option value="">譜面定数選択してください｡(整数部分)</option>
+                </select>
+                <label for="caliculator-input-constant">定数を選択(小数部分)</label>
+            <select id="caliculator-input-constant">
+                <option value="">先に整数部分を選択してください｡</option>
+            </select>
+            <label for="caliculator-input-apcheck">AP済み</label>
+            <input id="caliculator-input-apcheck" name="caliculator-input-apcheck" type="checkbox">
+            </div>
+            <div name="caliculator-output">
+                <h3>計算結果</h3>
+                <h4>単曲レート:<span id="caliculator-output-result-tankyoku"></span></h4>
+                <h4>RATING:<span id="caliculator-output-result-sum"></span></h4>
+                <h4>RATING(色):<span id="caliculator-output-result-color"></span></h4>
+            </div>
+        </div>
+</body>
+<script src="script.js"></script>
+</html>
